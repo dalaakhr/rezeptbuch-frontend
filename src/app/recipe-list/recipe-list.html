@@ -1,6 +1,11 @@
-<h2>Meine Rezepte</h2>
-<ul>
-  @for (rezept of rezepte; track rezept.titel) {
-    <li>{{ rezept.titel }} ({{ rezept.kategorie }}, {{ rezept.zeit }} Min.)</li>
-  }
-</ul>
+<div class="container mt-4">
+  <h2 class="mb-3">Meine Rezepte</h2>
+  <ul class="list-group">
+    @for (rezept of rezepte; track rezept.titel) {
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        {{ rezept.titel }}
+        <span class="badge bg-primary rounded-pill">{{ rezept.kategorie }}, {{ rezept.zeit }} Min.</span>
+      </li>
+    }
+  </ul>
+</div>
