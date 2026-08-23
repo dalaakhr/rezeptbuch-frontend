@@ -1,0 +1,6 @@
+<h2>Meine Rezepte</h2>
+<ul>
+  @for (rezept of rezepte; track rezept.titel) {
+    <li>{{ rezept.titel }} ({{ rezept.kategorie }}, {{ rezept.zeit }} Min.)</li>
+  }
+</ul>
