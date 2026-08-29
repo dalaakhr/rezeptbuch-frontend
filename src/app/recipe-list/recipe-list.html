@@ -1,16 +1,20 @@
 <div class="container mt-5">
-  <h2 class="mb-4">🍳 Meine Rezepte</h2>
-  <div class="row g-4">
-    @for (rezept of rezepte; track rezept.titel) {
-      <div class="col-md-4">
-        <div class="card recipe-card h-100 border-0 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">{{ rezept.titel }}</h5>
-            <span class="badge recipe-badge mb-2">{{ rezept.kategorie }}</span>
-            <p class="card-text text-muted mt-2">⏱ {{ rezept.zeit }} Minuten</p>
-          </div>
-        </div>
-      </div>
-    }
-  </div>
+    <h2 class="mb-4">🍳 Meine Rezepte</h2>
+    <div class="row g-4">
+        @for (rezept of rezepte; track rezept.titel) {
+        <div class="col-md-4">
+            <div class="card recipe-card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ rezept.titel }}</h5>
+                    <span class="badge recipe-badge mb-2">{{ rezept.kategorie }}</span>
+                    <p class="card-text text-muted mt-2">⏱ {{ rezept.zeit }} Minuten</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" [checked]="rezept.gemacht"
+                            (change)="toggleGemacht(rezept)" />
+                        <label class="form-check-label">schongekocht</label>
+                    </div>
+                </div>
+            </div>
+        </div> }
+    </div>
 </div>
