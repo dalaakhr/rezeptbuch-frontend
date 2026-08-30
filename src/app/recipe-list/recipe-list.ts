@@ -24,4 +24,7 @@ export class RecipeList {
     bearbeiten(rezept: any) {
     rezept.bearbeitung = !rezept.bearbeitung;
   }
+    loeschen(rezept: any) {
+    this.rezepte = this.rezepte.filter(r => r !== rezept);
+  }
 }
