@@ -4,13 +4,18 @@
     <h5 class="mb-3">Neues Rezept hinzufügen</h5>
     <div class="row g-2">
       <div class="col-md-4">
-        <input class="form-control" placeholder="Titel" [(ngModel)]="neuesRezept.titel" name="titel" />
+        <label for="titel" class="form-label">Titel</label>
+        <input class="form-control" id="titel" placeholder="Titel" [(ngModel)]="neuesRezept.titel" name="titel" />
       </div>
       <div class="col-md-3">
-        <input class="form-control" placeholder="Kategorie" [(ngModel)]="neuesRezept.kategorie" name="kategorie" />
+        <label for="kategorie" class="form-label">Kategorie</label>
+        <input class="form-control" id="kategorie" placeholder="Kategorie" [(ngModel)]="neuesRezept.kategorie"
+          name="kategorie" />
       </div>
       <div class="col-md-2">
-        <input class="form-control" type="number" placeholder="Minuten" [(ngModel)]="neuesRezept.zeit" name="zeit" />
+        <label for="zeit" class="form-label">Minuten</label>
+        <input class="form-control" id="zeit" type="number" placeholder="Minuten" [(ngModel)]="neuesRezept.zeit"
+          name="zeit" />
       </div>
       <div class="col-md-3">
         <button class="btn btn-primary w-100" (click)="rezeptHinzufuegen()">Hinzufügen</button>
@@ -44,4 +49,4 @@
     </div>
     }
   </div>
-</div>¬
+</div>
