@@ -1,7 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RecipeService } from '../shared/recipe';
-
 @Component({
   imports: [FormsModule],
   selector: 'app-recipe-list',
@@ -24,7 +23,8 @@ export class RecipeList implements OnInit {
     rezept.gemacht = !rezept.gemacht;
   }
   rezeptHinzufuegen() {
-    this.rezepte.push({ ...this.neuesRezept });
+    this.rs.create(this.neuesRezept)
+      .then(neuesRezept => this.rezepte.push(neuesRezept));
     this.neuesRezept = { titel: '', kategorie: '', zeit: 0, gemacht: false, bearbeitung: false };
   }
   bearbeiten(rezept: any) {
