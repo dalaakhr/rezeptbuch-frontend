@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectorRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RecipeService } from '../shared/recipe';
 @Component({
@@ -9,16 +9,19 @@ import { RecipeService } from '../shared/recipe';
 })
 export class RecipeList implements OnInit {
   private rs = inject(RecipeService);
+  private cdr = inject(ChangeDetectorRef);
 
   rezepte: any[] = [];
   neuesRezept = { titel: '', kategorie: '', zeit: 0, gemacht: false, bearbeitung: false };
 
   ngOnInit(): void {
-    this.rs.getAll()
-      .then(response => this.rezepte = response)
-      .then(rezepte => console.log('rezepte in RecipeList: ', rezepte));
-  }
-
+  this.rs.getAll()
+    .then(response => {
+      this.rezepte = response;
+      console.log('rezepte in RecipeList: ', this.rezepte);
+      this.cdr.detectChanges();
+    });
+}
   toggleGemacht(rezept: any) {
     rezept.gemacht = !rezept.gemacht;
   }
@@ -28,6 +31,10 @@ export class RecipeList implements OnInit {
     this.neuesRezept = { titel: '', kategorie: '', zeit: 0, gemacht: false, bearbeitung: false };
   }
   bearbeiten(rezept: any) {
+    if (rezept.bearbeitung) {
+      this.rs.update(rezept)
+        .then(aktualisiertesRezept => Object.assign(rezept, aktualisiertesRezept));
+    }
     rezept.bearbeitung = !rezept.bearbeitung;
   }
   loeschen(rezept: any) {

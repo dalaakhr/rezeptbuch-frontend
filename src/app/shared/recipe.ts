@@ -32,4 +32,14 @@ export class RecipeService {
         console.log('neues rezept im service (create): ', neuesRezept);
         return neuesRezept;
     }
+    async update(rezept: any): Promise<Rezept> {
+        let response = await fetch(this.apiURL+'/rezepte/' + rezept._id, {
+            method: 'PATCH' ,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(rezept)
+        });
+        let aktualisiertesRezept = await response.json();
+        console.log('rezept im service (update): ', aktualisiertesRezept);
+        return aktualisiertesRezept;
+    }
 }
