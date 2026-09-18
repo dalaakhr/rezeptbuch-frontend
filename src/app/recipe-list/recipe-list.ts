@@ -24,6 +24,11 @@ export class RecipeList implements OnInit {
 }
   toggleGemacht(rezept: any) {
     rezept.gemacht = !rezept.gemacht;
+    this.rs.update(rezept)
+    .then(aktualisiertesRezept => {
+      Object.assign(rezept, aktualisiertesRezept);
+      this.cdr.detectChanges();
+    });
   }
   rezeptHinzufuegen() {
     this.rs.create(this.neuesRezept)
