@@ -42,4 +42,10 @@ export class RecipeService {
         console.log('rezept im service (update): ', aktualisiertesRezept);
         return aktualisiertesRezept;
     }
+        async delete(id: string): Promise<void> {
+        await fetch(this.apiURL + '/rezepte/' + id, {
+            method: 'DELETE'
+        });
+        console.log('rezept geloescht im service (delete): ', id);
+    }
 }

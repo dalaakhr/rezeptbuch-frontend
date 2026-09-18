@@ -38,6 +38,10 @@ export class RecipeList implements OnInit {
     rezept.bearbeitung = !rezept.bearbeitung;
   }
   loeschen(rezept: any) {
+     this.rs.delete(rezept._id)
+    .then(() => {
     this.rezepte = this.rezepte.filter(r => r !== rezept);
-  }
+    this.cdr.detectChanges();
+  });
 } 
+}
