@@ -6,6 +6,8 @@ export interface Rezept {
     kategorie: string;
     zeit: number;
     gemacht: boolean;
+    zutaten: string;
+    zubereitung: string;
 }
 
 @Injectable({
