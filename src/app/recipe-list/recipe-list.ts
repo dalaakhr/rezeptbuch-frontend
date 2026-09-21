@@ -12,7 +12,7 @@ export class RecipeList implements OnInit {
   private cdr = inject(ChangeDetectorRef);
 
   rezepte: any[] = [];
-  neuesRezept = { titel: '', kategorie: '', zeit: 0, gemacht: false, bearbeitung: false };
+  neuesRezept = { titel: '', kategorie: '', zeit: 0, zutaten: '', zubereitung: '', gemacht: false, bearbeitung: false };
 
   ngOnInit(): void {
     this.rs.getAll()
@@ -36,7 +36,7 @@ export class RecipeList implements OnInit {
         this.rezepte.push(neuesRezept);
         this.cdr.detectChanges();
       });
-    this.neuesRezept = { titel: '', kategorie: '', zeit: 0, gemacht: false, bearbeitung: false };
+    this.neuesRezept = { titel: '', kategorie: '', zeit: 0, zutaten: '', zubereitung: '', gemacht: false, bearbeitung: false };
   }
   bearbeiten(rezept: any) {
     if (rezept.bearbeitung) {
