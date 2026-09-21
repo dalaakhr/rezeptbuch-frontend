@@ -21,6 +21,18 @@
         <button class="btn btn-primary w-100" (click)="rezeptHinzufuegen()">Hinzufügen</button>
       </div>
     </div>
+    <div class="row g-2 mt-2">
+      <div class="col-md-6">
+        <label for="zutaten" class="form-label">Zutaten</label>
+        <textarea class="form-control" id="zutaten" rows="3" placeholder="z.B. 200g Mehl, 2 Eier"
+          [(ngModel)]="neuesRezept.zutaten" name="zutaten"></textarea>
+      </div>
+      <div class="col-md-6">
+        <label for="zubereitung" class="form-label">Zubereitung</label>
+        <textarea class="form-control" id="zubereitung" rows="3" placeholder="z.B. 1. Mehl und Eier verrühren"
+          [(ngModel)]="neuesRezept.zubereitung" name="zubereitung"></textarea>
+      </div>
+    </div>
   </div>
   <div class="row g-4">
     @for (rezept of rezepte; track rezept.titel) {
@@ -31,11 +43,23 @@
           <input class="form-control mb-2" [(ngModel)]="rezept.titel" name="edit-titel" />
           <input class="form-control mb-2" [(ngModel)]="rezept.kategorie" name="edit-kategorie" />
           <input class="form-control mb-2" type="number" [(ngModel)]="rezept.zeit" name="edit-zeit" />
+          <textarea class="form-control mb-2" rows="3" placeholder="Zutaten" [(ngModel)]="rezept.zutaten"
+            name="edit-zutaten"></textarea>
+          <textarea class="form-control mb-2" rows="3" placeholder="Zubereitung" [(ngModel)]="rezept.zubereitung"
+            name="edit-zubereitung"></textarea>
           <button class="btn btn-success btn-sm" (click)="bearbeiten(rezept)">Fertig</button>
           } @else {
           <h5 class="card-title">{{ rezept.titel }}</h5>
           <span class="badge recipe-badge mb-2">{{ rezept.kategorie }}</span>
           <p class="card-text text-muted mt-2">⏱ {{ rezept.zeit }} Minuten</p>
+          @if (rezept.zutaten) {
+          <p class="card-text mb-1"><strong>Zutaten:</strong></p>
+          <p class="card-text mehrzeilig">{{ rezept.zutaten }}</p>
+          }
+          @if (rezept.zubereitung) {
+          <p class="card-text mb-1"><strong>Zubereitung:</strong></p>
+          <p class="card-text mehrzeilig">{{ rezept.zubereitung }}</p>
+          }
           <div class="form-check">
             <input class="form-check-input" type="checkbox" [checked]="rezept.gemacht"
               (change)="toggleGemacht(rezept)" />

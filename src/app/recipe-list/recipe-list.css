@@ -15,3 +15,6 @@
   border-radius: 20px;
   font-size: 0.8rem;
 }
+.mehrzeilig {
+  white-space: pre-line;
+}
