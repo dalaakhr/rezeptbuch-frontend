@@ -3,22 +3,19 @@
   <div class="card p-3 mb-4 shadow-sm">
     <h5 class="mb-3">Neues Rezept hinzufügen</h5>
     <div class="row g-2">
-      <div class="col-md-4">
+      <div class="col-md-5">
         <label for="titel" class="form-label">Titel</label>
         <input class="form-control" id="titel" placeholder="Titel" [(ngModel)]="neuesRezept.titel" name="titel" />
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <label for="kategorie" class="form-label">Kategorie</label>
         <input class="form-control" id="kategorie" placeholder="Kategorie" [(ngModel)]="neuesRezept.kategorie"
           name="kategorie" />
       </div>
-      <div class="col-md-2">
+      <div class="col-md-3">
         <label for="zeit" class="form-label">Minuten</label>
         <input class="form-control" id="zeit" type="number" placeholder="Minuten" [(ngModel)]="neuesRezept.zeit"
           name="zeit" />
-      </div>
-      <div class="col-md-3">
-        <button class="btn btn-primary w-100" (click)="rezeptHinzufuegen()">Hinzufügen</button>
       </div>
     </div>
     <div class="row g-2 mt-2">
@@ -32,6 +29,9 @@
         <textarea class="form-control" id="zubereitung" rows="3" placeholder="z.B. 1. Mehl und Eier verrühren"
           [(ngModel)]="neuesRezept.zubereitung" name="zubereitung"></textarea>
       </div>
+    </div>
+    <div class="mt-3">
+      <button class="btn btn-primary w-100" (click)="rezeptHinzufuegen()">Hinzufügen</button>
     </div>
   </div>
   <div class="row g-4">
