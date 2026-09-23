@@ -32,3 +32,21 @@
   color: #1f2a44;
   font-weight: 600;
 }
+
+.btn-outline-secondary {
+  border-color: #1f2a44;
+  color: #1f2a44;
+}
+.btn-outline-secondary:hover {
+  background-color: #1f2a44;
+  color: white;
+}
+
+h5 {
+  color: #1f2a44;
+} 
+
+.form-check-input:checked {
+  background-color: #1f2a44;
+  border-color: #1f2a44;
+}
