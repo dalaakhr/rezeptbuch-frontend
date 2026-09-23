@@ -1,11 +1,6 @@
-.recipe-card {
-  border-radius: 16px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
 .recipe-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .recipe-badge {
@@ -15,9 +10,11 @@
   border-radius: 20px;
   font-size: 0.8rem;
 }
+
 .mehrzeilig {
   white-space: pre-line;
 }
+
 .btn-navy {
   background-color: #1f2a44;
   color: white;
@@ -37,6 +34,7 @@
   border-color: #1f2a44;
   color: #1f2a44;
 }
+
 .btn-outline-secondary:hover {
   background-color: #1f2a44;
   color: white;
@@ -44,9 +42,21 @@
 
 h5 {
   color: #1f2a44;
-} 
+  font-weight: 700;
+}
 
 .form-check-input:checked {
   background-color: #1f2a44;
   border-color: #1f2a44;
+}
+
+.card-title {
+  color: #1f2a44;
+  font-weight: 700;
+}
+
+.recipe-card {
+  border-radius: 16px;
+  border: 1px solid #f0d4da;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }

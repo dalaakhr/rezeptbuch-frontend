@@ -1,6 +1,6 @@
 <div class="container mt-5">
   <h2 class="mb-4">👩‍🍳 Mein Rezeptbuch</h2>
-  <div class="card p-3 mb-4 shadow-sm">
+  <div class="card p-3 mb-4">
     <h5 class="mb-3">Neues Rezept hinzufügen</h5>
     <div class="row g-2">
       <div class="col-md-5">
@@ -37,7 +37,7 @@
   <div class="row g-4">
     @for (rezept of rezepte; track rezept.titel) {
     <div class="col-md-4">
-      <div class="card recipe-card h-100 border-0 shadow-sm">
+      <div class="card recipe-card h-100 shadow-sm">
         <div class="card-body">
           @if (rezept.bearbeitung) {
           <input class="form-control mb-2" [(ngModel)]="rezept.titel" name="edit-titel" />
