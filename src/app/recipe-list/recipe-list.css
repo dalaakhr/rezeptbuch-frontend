@@ -9,12 +9,21 @@
 }
 
 .recipe-badge {
-  background-color: #e07a5f;
-  color: white;
+  background-color: #f7d6dd;
+  color: #1f2a44;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.8rem;
 }
 .mehrzeilig {
   white-space: pre-line;
+}
+.btn-navy {
+  background-color: #1f2a44;
+  color: white;
+}
+
+.btn-navy:hover {
+  background-color: #2e3d63;
+  color: white;
 }
