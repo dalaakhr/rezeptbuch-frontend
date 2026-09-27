@@ -74,35 +74,41 @@ dabei übersichtlich auf einen Blick sichtbar.
 - Zugang zu MongoDB Atlas
 
 ### Repositories klonen
-git clone https://github.com/dalaakhr/rezeptbuch-backend.git
 
+```
+git clone https://github.com/dalaakhr/rezeptbuch-backend.git
 git clone https://github.com/dalaakhr/rezeptbuch-frontend.git
+```
 
 ### Backend starten
 
+```
 cd rezeptbuch-backend
 npm install
-
+```
 
 Im Hauptordner eine Datei `.env` anlegen:
 
-DB_CONNECTION = mongodb+srv://<benutzername>:<passwort>@<cluster>.mongodb.net
+```
+DB_CONNECTION = mongodb+srv://benutzername:passwort@cluster.mongodb.net
 DATABASE = rezeptbuch
-
+```
 
 Danach starten:
 
+```
 node server.js
-
+```
 
 Das Backend läuft dann auf http://localhost:3000
 
 ### Frontend starten
 
+```
 cd rezeptbuch-frontend
 npm install
 ng serve
-
+```
 
 Die Anwendung ist erreichbar unter http://localhost:4200
 
@@ -127,11 +133,10 @@ Ein Rezept besteht aus folgenden Feldern:
 
 - **Claude**: Aufbau des Codes, Erklärung von Konzepten, Fehlersuche,
   Code-Kommentare, Design-Ideen, README
-- **Gemini**: einzelne Fragen zum Code
+- **Gemini**: einzelne  Fragen zum Code
 
 ---
 
 ## Autorin
 
 Dalaa Khreis – Semesteraufgabe WebTech, HTW Berlin, 2026
-
