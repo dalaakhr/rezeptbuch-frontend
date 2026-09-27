@@ -139,4 +139,4 @@ Ein Rezept besteht aus folgenden Feldern:
 
 ## Autorin
 
-Dalaa Khreis – Semesteraufgabe WebTech, HTW Berlin, 2026
+Dalaa Khreis – HTW Berlin, 2026
