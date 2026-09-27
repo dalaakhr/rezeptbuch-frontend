@@ -60,7 +60,7 @@ dabei übersichtlich auf einen Blick sichtbar.
 #### Ein Rezept im Bearbeiten-Modus:
 ![Bearbeiten](./screenshots/bearbeiten.png)
 
-#### Mobile Ansicht (schmales Browserfenster):
+#### Mobile Ansicht:
 ![Mobil](./screenshots/mobil.png)
 
 ---
