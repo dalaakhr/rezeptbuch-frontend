@@ -75,6 +75,7 @@ dabei übersichtlich auf einen Blick sichtbar.
 
 ### Repositories klonen
 git clone https://github.com/dalaakhr/rezeptbuch-backend.git
+
 git clone https://github.com/dalaakhr/rezeptbuch-frontend.git
 
 ### Backend starten
@@ -124,9 +125,9 @@ Ein Rezept besteht aus folgenden Feldern:
 
 ## KI-Nutzung
 
-- **Claude (Anthropic)**: Aufbau des Codes, Erklärung von Konzepten, Fehlersuche,
+- **Claude**: Aufbau des Codes, Erklärung von Konzepten, Fehlersuche,
   Code-Kommentare, Design-Ideen, README
-- **Gemini (Google)**: einzelne Fragen zum Code
+- **Gemini**: einzelne Fragen zum Code
 
 ---
 
