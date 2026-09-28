@@ -1,9 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+/* globale Styles fuer die ganze App: Hintergrundfarbe und Schriftart */
 body {
   background-color: #fdf2f4;
   font-family: 'Poppins', sans-serif;
 }
-
+/* Hauptueberschrift in Navy */
 h2 {
   color: #1f2a44;
   font-weight: 700;
