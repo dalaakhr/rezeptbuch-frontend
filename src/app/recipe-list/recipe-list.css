@@ -1,8 +1,19 @@
+/* Styles für die Rezeptliste: Karten, Badges, Buttons und Beschriftungen */
+
+/* Rezeptkarte: runde Ecken, zarter Rahmen, sanfte Bewegung beim Hovern */
+.recipe-card {
+  border-radius: 16px;
+  border: 1px solid #f0d4da;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* beim rueberfahren mit der Maus hebt sich die Karte leicht an */
 .recipe-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Kategorie-Label in Rosa mit dunkler Schrift */
 .recipe-badge {
   background-color: #f7d6dd;
   color: #1f2a44;
@@ -11,10 +22,12 @@
   font-size: 0.8rem;
 }
 
+/* zeigt Zeilenumbrueche aus den Textfeldern auch auf der Karte an */
 .mehrzeilig {
   white-space: pre-line;
 }
 
+/* eigener Button in Navyblau */
 .btn-navy {
   background-color: #1f2a44;
   color: white;
@@ -25,11 +38,13 @@
   color: white;
 }
 
+/* Beschriftungen im Formular in Navy und etwas kraeftiger */
 .form-label {
   color: #1f2a44;
   font-weight: 600;
 }
 
+/* Bearbeiten-Button an das Farbschema angepasst */
 .btn-outline-secondary {
   border-color: #1f2a44;
   color: #1f2a44;
@@ -40,23 +55,20 @@
   color: white;
 }
 
+/* Ueberschriften in Navy */
 h5 {
   color: #1f2a44;
   font-weight: 700;
 }
 
+/* angehakte Checkbox in Navy statt Bootstrap-Blau */
 .form-check-input:checked {
   background-color: #1f2a44;
   border-color: #1f2a44;
 }
 
+/* Rezept-Titel auf der Karte */
 .card-title {
   color: #1f2a44;
   font-weight: 700;
-}
-
-.recipe-card {
-  border-radius: 16px;
-  border: 1px solid #f0d4da;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
